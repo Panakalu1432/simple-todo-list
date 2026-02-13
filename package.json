@@ -12,7 +12,10 @@
     "@testing-library/user-event": "12.6.2",
     "chalk": "4.1.0",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "react-modal": "3.16.3",
+    "react-router-dom": "5.3.4",
+    "reactjs-popup": "2.0.6"
   },
   "devDependencies": {
     "eslint-config-airbnb": "18.2.1",

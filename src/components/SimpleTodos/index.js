@@ -1,5 +1,7 @@
 import {Component} from 'react'
 import Item from '../TodoItem'
+import NavBar from '../NavBar'
+import PopCard from '../PopCard'
 import './index.css'
 
 const initialTodosList = [
@@ -38,7 +40,7 @@ const initialTodosList = [
 ]
 
 class SimpleTodos extends Component {
-  state = {list: initialTodosList}
+  state = {list: initialTodosList, popView: false}
 
   onDelete = id => {
     const {list} = this.state
@@ -47,20 +49,33 @@ class SimpleTodos extends Component {
     this.setState({list: filteringDate})
   }
 
+  addTodo = () => {
+    console.log('lkasdj')
+    this.setState({popView: true})
+  }
+
   render() {
-    const {list} = this.state
+    const {list, popView} = this.state
 
     return (
-      <div className="bg-container">
-        <div className="bg-card">
-          <h1 className="heading">Simple Todos</h1>
-          <ul>
-            {list.map(each => (
-              <Item each={each} onDelete={this.onDelete} key={each.id} />
-            ))}
-          </ul>
+      <>
+        <NavBar openAddTodo={this.addTodo} />
+        <div className="bg-container">
+          <div className="bg-card">
+            <ul>
+              {list.map(each => (
+                <Item each={each} onDelete={this.onDelete} key={each.id} />
+              ))}
+            </ul>
+          </div>
         </div>
-      </div>
+        {popView && (
+          <PopCard
+            open={popView}
+            closePopup={() => this.setState({popView: false})}
+          />
+        )}
+      </>
     )
   }
 }

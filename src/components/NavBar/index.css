@@ -1,0 +1,29 @@
+.nav-heading {
+  color: #ff8542;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  margin: 5px;
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
+.nav-btn {
+  background-color: blue;
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  border: 0;
+  box-shadow: 10px 10px;
+}
+
+.nav-mini-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
