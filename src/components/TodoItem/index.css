@@ -1,0 +1,15 @@
+.content-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.btn {
+  padding-left: 35px;
+  padding-right: 35px;
+  border: 2px #ff0b37 solid;
+  background-color: transparent;
+  color: #ff0b37;
+  border-radius: 10px;
+  margin-left: 10px;
+}

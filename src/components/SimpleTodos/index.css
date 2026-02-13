@@ -1,0 +1,21 @@
+.bg-container {
+  background-color: #ffc2a0;
+  padding: 45px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bg-card {
+  background-color: #ffffff;
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.heading{
+  color:#ff8542 ;
+}
